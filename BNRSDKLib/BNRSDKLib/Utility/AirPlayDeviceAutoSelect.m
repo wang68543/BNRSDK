@@ -38,6 +38,7 @@
             return;
         }
     }
+    NSLog(@"test");
 }
 
 -(void)dealloc{
