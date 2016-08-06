@@ -38,7 +38,7 @@
             return;
         }
     }
-    NSLog(@"test");
+    NSLog(@"2342134123");
 }
 
 -(void)dealloc{
