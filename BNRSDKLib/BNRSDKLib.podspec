@@ -99,6 +99,10 @@ Pod::Spec.new do |s|
       s2.source_files = 'BNRSDKLib/BNRSDKLib/Utility/*.{m,h}'
     end
 
+    s.subspec 'Category' do |s2|
+        s2.source_files = 'BNRSDKLib/BNRSDKLib/Category/*.{m,h}'
+    end
+
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
