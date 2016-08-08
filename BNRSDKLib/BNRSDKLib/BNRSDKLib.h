@@ -18,3 +18,5 @@ FOUNDATION_EXPORT const unsigned char BNRSDKLibVersionString[];
 
 
 #import <BNRSDKLib/AirPlayDeviceAutoSelect.h>
+#import <BNRSDKLib/NSDate+SSToolkitAdditions.h>
+#import <BNRSDKLib/NSNotification+BNRAddditions.h>
