@@ -14,7 +14,7 @@
     if (time == nil || time.length <= 0) {
         return;
     }
-    if ([NSDate betweenSecondWithStartTime:time EndTime:[[NSDate alloc] LocalTimeISO8601String]]<0) {
+    if ([NSDate betweenSecondWithStartTime:time EndTime:[[NSDate date] LocalTimeISO8601String]]<0) {
         return;
     }
     NSDate *date = [NSDate getDateStr:time withTimeZone:[NSTimeZone localTimeZone]];
