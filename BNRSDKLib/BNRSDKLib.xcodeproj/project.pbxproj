@@ -13,7 +13,6 @@
 		1B3F72581D58A65000A0FF31 /* NSDate+SSToolkitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F72561D58A65000A0FF31 /* NSDate+SSToolkitAdditions.m */; };
 		1B7BC63F1D55E47C005E84FE /* BNRSDKLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B7BC63E1D55E47C005E84FE /* BNRSDKLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B7BC6491D55E61F005E84FE /* AirPlayDeviceAutoSelect.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B7BC6471D55E61F005E84FE /* AirPlayDeviceAutoSelect.h */; };
-		1B7BC64A1D55E61F005E84FE /* AirPlayDeviceAutoSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7BC6481D55E61F005E84FE /* AirPlayDeviceAutoSelect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,7 +169,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B3F72581D58A65000A0FF31 /* NSDate+SSToolkitAdditions.m in Sources */,
-				1B7BC64A1D55E61F005E84FE /* AirPlayDeviceAutoSelect.m in Sources */,
 				1B3F724B1D587DF400A0FF31 /* NSNotification+BNRAddditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
