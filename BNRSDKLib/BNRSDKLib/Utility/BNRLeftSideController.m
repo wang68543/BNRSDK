@@ -12,37 +12,34 @@
 #import "BNRMacro.h"
 
 #define kDutyOfWidth  (6*kScreenWidth/8.)
+
 #define InitAlpha 1
 
 const char *kLeftSideControllerKey = "BNRLeftSideController";
 
-@interface BNRLeftSideController ()
+@interface BNRLeftSideController (){
+    UIViewController * leftControl;
+    UIViewController * mainControl;
+    
+    UIImageView * imgBackground;
+    
+}
+
 @property(nonatomic,strong)UIView *maskView;
 @property(nonatomic) BOOL isShowLeftView;
 @property (nonatomic) int hitWidth;
 @end
 
 @implementation BNRLeftSideController
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        _hitWidth = 50;
-        
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    mainControl.view.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2,[UIScreen mainScreen].bounds.size.height/2);
-
+    
     leftControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,-kScreenWidth/2.,0);
     
-    self.maskView.alpha = InitAlpha;
 
 }
 
@@ -65,7 +62,6 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
                         andBackgroundImage:(UIImage *)image;
 {
     if(self){
-        self.hitWidth = 50;
         
         leftControl = LeftView;
         mainControl = MainView;
@@ -107,6 +103,11 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
         [self.view addSubview:mainControl.view];
         
         leftControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,-kScreenWidth/2.,0);
+        
+        self.hitWidth = 50;
+        self.xShift = kDutyOfWidth;
+        self.yShift = 40;
+        self.maskView.alpha = InitAlpha;
     }
     return self;
 }
@@ -132,14 +133,15 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
         return;
     }
     
-    CGFloat leftShiftfac = (point.x*kScreenWidth)/(2*kDutyOfWidth);
-    if (point.x < kDutyOfWidth) {
-        mainControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, point.x, 0);
+    CGFloat leftShiftfac = (point.x*kScreenWidth)/(2*self.xShift);
+    CGFloat yShiftFac = self.yShift*point.x/self.xShift;
+    if (point.x < self.xShift) {
+        mainControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, point.x, yShiftFac);
         leftControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,-kScreenWidth/2.+leftShiftfac,0);
-        self.maskView.alpha = InitAlpha*(1 - point.x/kDutyOfWidth);
+        self.maskView.alpha = InitAlpha*(1 - point.x/self.xShift);
     }
     if (pan.state == UIGestureRecognizerStateEnded) {
-        if (point.x < kDutyOfWidth/2.) {
+        if (point.x < self.xShift/2.) {
             [self showMainView];
         }else{
             [self showLeftView];
@@ -183,7 +185,7 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
 //显示左视图
 -(void)showLeftView{
     [UIView beginAnimations:nil context:nil];
-    mainControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,kDutyOfWidth,0.);
+    mainControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,self.xShift,self.yShift);
     leftControl.view.transform = CGAffineTransformIdentity;
     self.isShowLeftView = YES;
     self.maskView.alpha = 0;

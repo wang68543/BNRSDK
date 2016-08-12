@@ -12,17 +12,15 @@
 @class BNRLeftSideController;
 
 
-@interface BNRLeftSideController : UIViewController{
-@private
-    UIViewController * leftControl;
-    UIViewController * mainControl;
-    
-    UIImageView * imgBackground;
-    
-}
-@property (nonatomic,weak) id delegate;
-
-
+@interface BNRLeftSideController : UIViewController
+/**
+ *  显示左视图时，主页视图右移的位置
+ */
+@property (nonatomic, assign) CGFloat   xShift;
+/**
+ *  显示左视图时，主页视图下移的位置
+ */
+@property (nonatomic, assign) CGFloat   yShift;
 
 //初始化
 -(instancetype)initWithLeftView:(UIViewController *)LeftView
