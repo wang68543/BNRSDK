@@ -16,9 +16,10 @@ FOUNDATION_EXPORT const unsigned char BNRSDKLibVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <BNRSDKLib/PublicHeader.h>
 
-#import <BNRSDKLib/BNRMacro.h>
-#import <BNRSDKLib/AirPlayDeviceAutoSelect.h>
-#import <BNRSDKLib/NSDate+SSToolkitAdditions.h>
-#import <BNRSDKLib/NSNotification+BNRAddditions.h>
-#import <BNRSDKLib/UIImage+BNRAdditions.h>
-#import <BNRSDKLib/BNRLeftSideController.h>
+#import "BNRMacro.h"
+#import "AirPlayDeviceAutoSelect.h"
+#import "NSDate+SSToolkitAdditions.h"
+#import "NSNotification+BNRAddditions.h"
+#import "UIImage+BNRAdditions.h"
+#import "BNRLeftSideController.h"
+#import "UIViewController+HETAdditions.h"

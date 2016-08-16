@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		18E05705DA98A9EE9D9768DB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A341CC2A7349045DB7EAA3 /* libPods.a */; };
+		1B05401B1D5E3B4600619F17 /* BNRCirleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B945DA41D5E1E0000CE22A2 /* BNRCirleView.m */; };
+		1B1CEFBE1D61AF8100E00F3A /* BNRFlipNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CEFBC1D61AF8100E00F3A /* BNRFlipNumber.h */; };
+		1B1CEFBF1D61AF8100E00F3A /* BNRFlipNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFBD1D61AF8100E00F3A /* BNRFlipNumber.m */; };
+		1B1CEFC01D61AF8100E00F3A /* BNRFlipNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFBD1D61AF8100E00F3A /* BNRFlipNumber.m */; };
+		1B1CEFC31D61EF4700E00F3A /* BNRCurBtn.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CEFC11D61EF4700E00F3A /* BNRCurBtn.h */; };
+		1B1CEFC41D61EF4700E00F3A /* BNRCurBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFC21D61EF4700E00F3A /* BNRCurBtn.m */; };
+		1B1CEFC51D61EF4700E00F3A /* BNRCurBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFC21D61EF4700E00F3A /* BNRCurBtn.m */; };
+		1B1CEFC81D62E85B00E00F3A /* UIViewController+HETAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CEFC61D62E85B00E00F3A /* UIViewController+HETAdditions.h */; };
+		1B1CEFC91D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */; };
+		1B1CEFCA1D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */; };
 		1B3F724A1D587DF400A0FF31 /* NSNotification+BNRAddditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3F72481D587DF400A0FF31 /* NSNotification+BNRAddditions.h */; };
 		1B3F724B1D587DF400A0FF31 /* NSNotification+BNRAddditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F72491D587DF400A0FF31 /* NSNotification+BNRAddditions.m */; };
 		1B3F72571D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3F72551D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h */; };
@@ -31,12 +41,17 @@
 		1B945D9A1D5D62AB00CE22A2 /* BNRLeftSideController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B945D981D5D62AB00CE22A2 /* BNRLeftSideController.h */; };
 		1B945D9B1D5D62AB00CE22A2 /* BNRLeftSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B945D991D5D62AB00CE22A2 /* BNRLeftSideController.m */; };
 		1B945D9C1D5D62AB00CE22A2 /* BNRLeftSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B945D991D5D62AB00CE22A2 /* BNRLeftSideController.m */; };
-		1B945D9F1D5DA0DD00CE22A2 /* UIViewController+HETAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B945D9D1D5DA0DD00CE22A2 /* UIViewController+HETAdditions.h */; };
-		1B945DA01D5DA0DD00CE22A2 /* UIViewController+HETAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B945D9E1D5DA0DD00CE22A2 /* UIViewController+HETAdditions.m */; };
-		1B945DA11D5DA0DD00CE22A2 /* UIViewController+HETAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B945D9E1D5DA0DD00CE22A2 /* UIViewController+HETAdditions.m */; };
+		1B945DA51D5E1E0000CE22A2 /* BNRCirleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B945DA31D5E1E0000CE22A2 /* BNRCirleView.h */; };
+		3108FBD339995CD18D4ABD2C /* libPods-SDKLibDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 586ADB42035C1B26D02A386E /* libPods-SDKLibDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B1CEFBC1D61AF8100E00F3A /* BNRFlipNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRFlipNumber.h; path = Views/BNRFlipNumber.h; sourceTree = "<group>"; };
+		1B1CEFBD1D61AF8100E00F3A /* BNRFlipNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRFlipNumber.m; path = Views/BNRFlipNumber.m; sourceTree = "<group>"; };
+		1B1CEFC11D61EF4700E00F3A /* BNRCurBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRCurBtn.h; path = Views/BNRCurBtn.h; sourceTree = "<group>"; };
+		1B1CEFC21D61EF4700E00F3A /* BNRCurBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRCurBtn.m; path = Views/BNRCurBtn.m; sourceTree = "<group>"; };
+		1B1CEFC61D62E85B00E00F3A /* UIViewController+HETAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+HETAdditions.h"; path = "Category/UIViewController+HETAdditions.h"; sourceTree = "<group>"; };
+		1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+HETAdditions.m"; path = "Category/UIViewController+HETAdditions.m"; sourceTree = "<group>"; };
 		1B3F72481D587DF400A0FF31 /* NSNotification+BNRAddditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotification+BNRAddditions.h"; path = "Category/NSNotification+BNRAddditions.h"; sourceTree = "<group>"; };
 		1B3F72491D587DF400A0FF31 /* NSNotification+BNRAddditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotification+BNRAddditions.m"; path = "Category/NSNotification+BNRAddditions.m"; sourceTree = "<group>"; };
 		1B3F72551D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+SSToolkitAdditions.h"; path = "Category/NSDate+SSToolkitAdditions.h"; sourceTree = "<group>"; };
@@ -65,9 +80,12 @@
 		1B945D941D5D61BE00CE22A2 /* UIImage+BNRAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+BNRAdditions.m"; path = "Category/UIImage+BNRAdditions.m"; sourceTree = "<group>"; };
 		1B945D981D5D62AB00CE22A2 /* BNRLeftSideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRLeftSideController.h; path = Utility/BNRLeftSideController.h; sourceTree = "<group>"; };
 		1B945D991D5D62AB00CE22A2 /* BNRLeftSideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRLeftSideController.m; path = Utility/BNRLeftSideController.m; sourceTree = "<group>"; };
-		1B945D9D1D5DA0DD00CE22A2 /* UIViewController+HETAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HETAdditions.h"; sourceTree = "<group>"; };
-		1B945D9E1D5DA0DD00CE22A2 /* UIViewController+HETAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HETAdditions.m"; sourceTree = "<group>"; };
+		1B945DA31D5E1E0000CE22A2 /* BNRCirleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRCirleView.h; path = Views/BNRCirleView.h; sourceTree = "<group>"; };
+		1B945DA41D5E1E0000CE22A2 /* BNRCirleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRCirleView.m; path = Views/BNRCirleView.m; sourceTree = "<group>"; };
+		2598BA4C07D883F921EB0326 /* Pods-SDKLibDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKLibDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDKLibDemo/Pods-SDKLibDemo.release.xcconfig"; sourceTree = "<group>"; };
 		56A341CC2A7349045DB7EAA3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		586ADB42035C1B26D02A386E /* libPods-SDKLibDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDKLibDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CCF3D54F2A795FD044A454 /* Pods-SDKLibDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKLibDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKLibDemo/Pods-SDKLibDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		88A43E3C272788437167299B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		992B3F79C61AF00B147F5EF9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3108FBD339995CD18D4ABD2C /* libPods-SDKLibDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				56A341CC2A7349045DB7EAA3 /* libPods.a */,
+				586ADB42035C1B26D02A386E /* libPods-SDKLibDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,8 +128,8 @@
 				1B3F72491D587DF400A0FF31 /* NSNotification+BNRAddditions.m */,
 				1B945D931D5D61BE00CE22A2 /* UIImage+BNRAdditions.h */,
 				1B945D941D5D61BE00CE22A2 /* UIImage+BNRAdditions.m */,
-				1B945D9D1D5DA0DD00CE22A2 /* UIViewController+HETAdditions.h */,
-				1B945D9E1D5DA0DD00CE22A2 /* UIViewController+HETAdditions.m */,
+				1B1CEFC61D62E85B00E00F3A /* UIViewController+HETAdditions.h */,
+				1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -161,6 +181,7 @@
 		1B945D701D5B470300CE22A2 /* SDKLibDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1B945DA21D5E1D7D00CE22A2 /* Views */,
 				1B945D891D5B47F600CE22A2 /* ViewControllers */,
 				1B945D741D5B470300CE22A2 /* AppDelegate.h */,
 				1B945D751D5B470300CE22A2 /* AppDelegate.m */,
@@ -193,11 +214,26 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		1B945DA21D5E1D7D00CE22A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B945DA31D5E1E0000CE22A2 /* BNRCirleView.h */,
+				1B945DA41D5E1E0000CE22A2 /* BNRCirleView.m */,
+				1B1CEFBC1D61AF8100E00F3A /* BNRFlipNumber.h */,
+				1B1CEFBD1D61AF8100E00F3A /* BNRFlipNumber.m */,
+				1B1CEFC11D61EF4700E00F3A /* BNRCurBtn.h */,
+				1B1CEFC21D61EF4700E00F3A /* BNRCurBtn.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		F6BCCCC76316E5208247A65F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				88A43E3C272788437167299B /* Pods.debug.xcconfig */,
 				992B3F79C61AF00B147F5EF9 /* Pods.release.xcconfig */,
+				85CCF3D54F2A795FD044A454 /* Pods-SDKLibDemo.debug.xcconfig */,
+				2598BA4C07D883F921EB0326 /* Pods-SDKLibDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -211,10 +247,13 @@
 			files = (
 				1B3F724A1D587DF400A0FF31 /* NSNotification+BNRAddditions.h in Headers */,
 				1B945D951D5D61BE00CE22A2 /* UIImage+BNRAdditions.h in Headers */,
+				1B1CEFBE1D61AF8100E00F3A /* BNRFlipNumber.h in Headers */,
 				1B7BC6491D55E61F005E84FE /* AirPlayDeviceAutoSelect.h in Headers */,
 				1B945D9A1D5D62AB00CE22A2 /* BNRLeftSideController.h in Headers */,
+				1B1CEFC81D62E85B00E00F3A /* UIViewController+HETAdditions.h in Headers */,
+				1B1CEFC31D61EF4700E00F3A /* BNRCurBtn.h in Headers */,
+				1B945DA51D5E1E0000CE22A2 /* BNRCirleView.h in Headers */,
 				1B3F72571D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h in Headers */,
-				1B945D9F1D5DA0DD00CE22A2 /* UIViewController+HETAdditions.h in Headers */,
 				1B945D6A1D5B01B800CE22A2 /* BNRMacro.h in Headers */,
 				1B945D8C1D5B485200CE22A2 /* MainVC.h in Headers */,
 				1B7BC63F1D55E47C005E84FE /* BNRSDKLib.h in Headers */,
@@ -248,9 +287,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B945D861D5B470300CE22A2 /* Build configuration list for PBXNativeTarget "SDKLibDemo" */;
 			buildPhases = (
+				D7FC89D24B41719A72946CA1 /* Check Pods Manifest.lock */,
 				1B945D6B1D5B470300CE22A2 /* Sources */,
 				1B945D6C1D5B470300CE22A2 /* Frameworks */,
 				1B945D6D1D5B470300CE22A2 /* Resources */,
+				EE25513640785E8676405149 /* Embed Pods Frameworks */,
+				A66143567AE2DAE5DAEDD9DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,6 +360,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A66143567AE2DAE5DAEDD9DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDKLibDemo/Pods-SDKLibDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7FC89D24B41719A72946CA1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		DF11ACD7A5921C67310AC8FB /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +420,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		EE25513640785E8676405149 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDKLibDemo/Pods-SDKLibDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -355,11 +442,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1CEFBF1D61AF8100E00F3A /* BNRFlipNumber.m in Sources */,
 				1B945D8D1D5B485200CE22A2 /* MainVC.m in Sources */,
+				1B1CEFC91D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */,
 				1B3F72581D58A65000A0FF31 /* NSDate+SSToolkitAdditions.m in Sources */,
-				1B945DA01D5DA0DD00CE22A2 /* UIViewController+HETAdditions.m in Sources */,
 				1B945D9B1D5D62AB00CE22A2 /* BNRLeftSideController.m in Sources */,
 				1B945D961D5D61BE00CE22A2 /* UIImage+BNRAdditions.m in Sources */,
+				1B1CEFC41D61EF4700E00F3A /* BNRCurBtn.m in Sources */,
 				1B3F724B1D587DF400A0FF31 /* NSNotification+BNRAddditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,11 +459,14 @@
 			files = (
 				1B945D9C1D5D62AB00CE22A2 /* BNRLeftSideController.m in Sources */,
 				1B945D791D5B470300CE22A2 /* ViewController.m in Sources */,
-				1B945DA11D5DA0DD00CE22A2 /* UIViewController+HETAdditions.m in Sources */,
+				1B05401B1D5E3B4600619F17 /* BNRCirleView.m in Sources */,
+				1B1CEFCA1D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */,
+				1B1CEFC51D61EF4700E00F3A /* BNRCurBtn.m in Sources */,
 				1B945D7F1D5B470300CE22A2 /* SDKLibDemo.xcdatamodeld in Sources */,
 				1B945D971D5D61BE00CE22A2 /* UIImage+BNRAdditions.m in Sources */,
 				1B945D761D5B470300CE22A2 /* AppDelegate.m in Sources */,
 				1B945D8E1D5B485200CE22A2 /* MainVC.m in Sources */,
+				1B1CEFC01D61AF8100E00F3A /* BNRFlipNumber.m in Sources */,
 				1B945D731D5B470300CE22A2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +619,7 @@
 		};
 		1B945D871D5B470300CE22A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CCF3D54F2A795FD044A454 /* Pods-SDKLibDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SDKLibDemo/Info.plist;
@@ -539,6 +632,7 @@
 		};
 		1B945D881D5B470300CE22A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2598BA4C07D883F921EB0326 /* Pods-SDKLibDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SDKLibDemo/Info.plist;

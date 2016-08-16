@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 #import <AVFoundation/AVFoundation.h>
 #import "BNRMacro.h"
-
+#import "UIViewController+HETAdditions.h"
 #define kDutyOfWidth  (6*kScreenWidth/8.)
 
 #define InitAlpha 1
@@ -40,7 +40,6 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
     
     leftControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,-kScreenWidth/2.,0);
     
-
 }
 
 - (void)viewWillAppear:(BOOL)animated{
