@@ -54,6 +54,7 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+    
     if (self.isShowLeftView) {
         [leftControl viewDidAppear:animated];
     }else{
