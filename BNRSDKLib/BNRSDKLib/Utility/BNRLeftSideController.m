@@ -44,7 +44,31 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+    if (self.isShowLeftView) {
+        [leftControl viewWillAppear:animated];
+    }else{
+        [mainControl viewWillAppear:animated];
+    }
 }
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+    if (self.isShowLeftView) {
+        [leftControl viewDidAppear:animated];
+    }else{
+        [mainControl viewDidAppear:animated];
+    }
+}
+//-(void)viewWillDisappear:(BOOL)animated{
+//    [super viewWillDisappear:animated];
+//    if (self.isShowLeftView) {
+//        [leftControl viewWillDisappear:animated];
+//    }else{
+//        [mainControl viewWillDisappear:animated];
+//    }
+//}
+
 -(void)viewDidDisappear:(BOOL)animated{
     [[UIApplication sharedApplication]setApplicationSupportsShakeToEdit:NO];
 }
@@ -190,7 +214,7 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
     self.maskView.alpha = 0;
     [UIView commitAnimations];
     
-    
+    [leftControl viewWillAppear:YES];
 }
 
 

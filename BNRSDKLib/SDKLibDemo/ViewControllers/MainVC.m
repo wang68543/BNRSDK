@@ -21,6 +21,7 @@
 
 @property (nonatomic,strong) UIView *redView;
 @property (nonatomic,strong) BNRCurBtn *btn;
+@property (weak, nonatomic) IBOutlet JTNumberScrollAnimatedView *scrollNumberView;
 @end
 
 @implementation MainVC
@@ -56,6 +57,11 @@ static BOOL isStop;
         }
         [number setValue:[NSNumber numberWithInt:(rand() % 100)]];
         [number startAnimation];
+        
+        self.scrollNumberView.frame = CGRectMake(150, 100, 100, 30);
+        [self.scrollNumberView setValue:@89];
+        [self.scrollNumberView startAnimation];
+        self.scrollNumberView.backgroundColor = [UIColor redColor];
     });
     dispatch_resume(self.timer);
     
@@ -85,19 +91,21 @@ static BOOL isStop;
     self.btn.backgroundColor = [UIColor clearColor];
     
     
+    
+    
 }
 - (IBAction)pushLeftSide:(id)sender {
     isStop = isStop==NO?YES:NO;
-//    UIViewController *left = [[UIViewController alloc] init];
-//    left.view.backgroundColor = [UIColor greenColor];
-//    UIViewController *main = [[UIViewController alloc] init];
-//    main.view.backgroundColor = [UIColor blueColor];
-//    
-//     BNRLeftSideController *controller = [[BNRLeftSideController alloc] initWithLeftView:left andMainView:main andBackgroundImage:nil];
-//    controller.view.backgroundColor = [UIColor whiteColor];
-//    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-//    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-//    [self.navigationController pushViewController:controller animated:YES];
+    UIViewController *left = [[UIViewController alloc] init];
+    left.view.backgroundColor = [UIColor greenColor];
+    UIViewController *main = [[UIViewController alloc] init];
+    main.view.backgroundColor = [UIColor blueColor];
+    
+     BNRLeftSideController *controller = [[BNRLeftSideController alloc] initWithLeftView:left andMainView:main andBackgroundImage:nil];
+    controller.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -70,14 +71,31 @@
                                     <action selector="pushLeftSide:" destination="gcu-hg-pg5" eventType="touchUpInside" id="bXr-fM-r6l"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpb-p5-lDo">
+                                <rect key="frame" x="232" y="368" width="49" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-UC-7Nq" customClass="JTNumberScrollAnimatedView">
+                                <rect key="frame" x="28" y="212" width="101" height="74"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="cpb-p5-lDo" firstAttribute="top" secondItem="miF-r2-IcE" secondAttribute="bottom" constant="304" id="1Vw-gC-6ef"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cpb-p5-lDo" secondAttribute="trailing" constant="23" id="BVZ-XZ-wPD"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="4QO-HK-lYV" appends="YES" id="9Jd-xM-FEg"/>
                         </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="scrollNumberView" destination="ryU-UC-7Nq" id="8xs-m4-GLY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuv-GV-nbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="4QO-HK-lYV">
