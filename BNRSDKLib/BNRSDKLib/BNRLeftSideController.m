@@ -28,6 +28,8 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
 @property(nonatomic,strong)UIView *maskView;
 @property(nonatomic) BOOL isShowLeftView;
 @property (nonatomic) int hitWidth;
+
+@property (nonatomic,strong) UITapGestureRecognizer *tap;
 @end
 
 @implementation BNRLeftSideController
@@ -45,33 +47,22 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
-    if (self.isShowLeftView) {
-        [leftControl viewWillAppear:animated];
-    }else{
-        [mainControl viewWillAppear:animated];
-    }
+    [mainControl viewWillAppear:animated];
+
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
-    
-    if (self.isShowLeftView) {
-        [leftControl viewDidAppear:animated];
-    }else{
-        [mainControl viewDidAppear:animated];
-    }
+    [mainControl viewDidAppear:animated];
 }
-//-(void)viewWillDisappear:(BOOL)animated{
-//    [super viewWillDisappear:animated];
-//    if (self.isShowLeftView) {
-//        [leftControl viewWillDisappear:animated];
-//    }else{
-//        [mainControl viewWillDisappear:animated];
-//    }
-//}
 
 -(void)viewDidDisappear:(BOOL)animated{
-    [[UIApplication sharedApplication]setApplicationSupportsShakeToEdit:NO];
+    [super viewDidDisappear:animated];
+    [mainControl viewDidDisappear:animated];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [mainControl viewWillDisappear:animated];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -105,9 +96,10 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
         
         
         //单击手势
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handeTap:)];
-        [tap setNumberOfTapsRequired:1];
-        [mainControl.view addGestureRecognizer:tap];
+        self.tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handeTap:)];
+        [self.tap setNumberOfTapsRequired:1];
+        [mainControl.view addGestureRecognizer:self.tap];
+        self.tap.enabled = NO;
 
         UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipLeftHandle:)];
         swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -175,14 +167,15 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
     
 }
 
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+}
 #pragma mark - 单击手势
 -(void)handeTap:(UITapGestureRecognizer *)tap{
     
     if (tap.state == UIGestureRecognizerStateEnded && self.isShowLeftView) {
         [self showMainView];
     }
-
 }
 
 - (void)swipLeftHandle:(UISwipeGestureRecognizer *)swip{
@@ -204,6 +197,7 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
     self.maskView.alpha = InitAlpha;
     self.isShowLeftView = NO;
     [UIView commitAnimations];
+    self.tap.enabled = NO;
 }
 
 //显示左视图
@@ -216,6 +210,7 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
     [UIView commitAnimations];
     
     [leftControl viewWillAppear:YES];
+    self.tap.enabled = YES;
 }
 
 
