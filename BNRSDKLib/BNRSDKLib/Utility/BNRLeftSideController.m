@@ -48,7 +48,6 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
     [self.navigationController setNavigationBarHidden:YES];
     [mainControl viewWillAppear:animated];
     [self showMainView];
-
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
