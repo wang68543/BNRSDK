@@ -47,7 +47,7 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     [mainControl viewWillAppear:animated];
-    [self showMainView];
+    [self showMainView:NO];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -157,9 +157,9 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
     }
     if (pan.state == UIGestureRecognizerStateEnded) {
         if (point.x < self.xShift/2.) {
-            [self showMainView];
+            [self showMainView:YES];
         }else{
-            [self showLeftView];
+            [self showLeftView:YES];
         }
         couldPan = NO;
     }
@@ -173,41 +173,49 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
 -(void)handeTap:(UITapGestureRecognizer *)tap{
     
     if (tap.state == UIGestureRecognizerStateEnded && self.isShowLeftView) {
-        [self showMainView];
+        [self showMainView:YES];
     }
 }
 
 - (void)swipLeftHandle:(UISwipeGestureRecognizer *)swip{
     if (swip.state == UIGestureRecognizerStateEnded && self.isShowLeftView) {
-        [self showMainView];
+        [self showMainView:YES];
     }
 }
 -(void)swipeRightHanle:(UISwipeGestureRecognizer *)swip{
     if (swip.state == UIGestureRecognizerStateEnded && self.isShowLeftView == NO) {
-        [self showLeftView];
+        [self showLeftView:YES];
     }
 }
 #pragma mark - 修改视图位置
 //恢复位置
--(void)showMainView{
-    [UIView beginAnimations:nil context:nil];
+-(void)showMainView:(BOOL)animation{
+    if (animation) {
+        [UIView beginAnimations:nil context:nil];
+    }
     mainControl.view.transform = CGAffineTransformIdentity;
     leftControl.view.transform =  CGAffineTransformTranslate(CGAffineTransformIdentity,-kScreenWidth/2.,0);;
     self.maskView.alpha = InitAlpha;
     self.isShowLeftView = NO;
-    [UIView commitAnimations];
+    if (animation) {
+        [UIView commitAnimations];
+    }
     self.tap.enabled = NO;
     [[NSNotificationCenter defaultCenter] postNotificationName:kNotifcationShowLeft object:@(NO)];
 }
 
 //显示左视图
--(void)showLeftView{
-    [UIView beginAnimations:nil context:nil];
+-(void)showLeftView:(BOOL)animation{
+    if (animation) {
+        [UIView beginAnimations:nil context:nil];
+    }
     mainControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,self.xShift,self.yShift);
     leftControl.view.transform = CGAffineTransformIdentity;
     self.isShowLeftView = YES;
     self.maskView.alpha = 0;
-    [UIView commitAnimations];
+    if (animation) {
+        [UIView commitAnimations];
+    }
     
     [leftControl viewWillAppear:YES];
     self.tap.enabled = YES;

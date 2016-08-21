@@ -90,8 +90,6 @@ static BOOL isStop;
     [self.scroll addSubview:self.btn];
     self.btn.backgroundColor = [UIColor clearColor];
     
-    
-    
 }
 - (IBAction)pushLeftSide:(id)sender {
     isStop = isStop==NO?YES:NO;

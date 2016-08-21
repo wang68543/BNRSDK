@@ -35,10 +35,10 @@ extern NSString *const kNotifcationShowLeft;
 
 
 //恢复位置
--(void)showMainView;
+-(void)showMainView:(BOOL)animation;
 
 //显示左视图
--(void)showLeftView;
+-(void)showLeftView:(BOOL)animation;
 
 
 @end
