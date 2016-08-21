@@ -18,8 +18,8 @@
 		1B1CEFC81D62E85B00E00F3A /* UIViewController+HETAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CEFC61D62E85B00E00F3A /* UIViewController+HETAdditions.h */; };
 		1B1CEFC91D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */; };
 		1B1CEFCA1D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */; };
-		1B1CEFCC1D6717E900E00F3A /* BNRLeftSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFCB1D6717E900E00F3A /* BNRLeftSideController.m */; };
-		1B1CEFCD1D6717E900E00F3A /* BNRLeftSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFCB1D6717E900E00F3A /* BNRLeftSideController.m */; };
+		1B1CEFCF1D698DCB00E00F3A /* BNRLeftSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFCE1D698DCB00E00F3A /* BNRLeftSideController.m */; };
+		1B1CEFD01D698DCB00E00F3A /* BNRLeftSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFCE1D698DCB00E00F3A /* BNRLeftSideController.m */; };
 		1B3F724A1D587DF400A0FF31 /* NSNotification+BNRAddditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3F72481D587DF400A0FF31 /* NSNotification+BNRAddditions.h */; };
 		1B3F724B1D587DF400A0FF31 /* NSNotification+BNRAddditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F72491D587DF400A0FF31 /* NSNotification+BNRAddditions.m */; };
 		1B3F72571D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3F72551D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h */; };
@@ -52,7 +52,7 @@
 		1B1CEFC21D61EF4700E00F3A /* BNRCurBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRCurBtn.m; path = Views/BNRCurBtn.m; sourceTree = "<group>"; };
 		1B1CEFC61D62E85B00E00F3A /* UIViewController+HETAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+HETAdditions.h"; path = "Category/UIViewController+HETAdditions.h"; sourceTree = "<group>"; };
 		1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+HETAdditions.m"; path = "Category/UIViewController+HETAdditions.m"; sourceTree = "<group>"; };
-		1B1CEFCB1D6717E900E00F3A /* BNRLeftSideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRLeftSideController.m; sourceTree = "<group>"; };
+		1B1CEFCE1D698DCB00E00F3A /* BNRLeftSideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRLeftSideController.m; path = Utility/BNRLeftSideController.m; sourceTree = "<group>"; };
 		1B3F72481D587DF400A0FF31 /* NSNotification+BNRAddditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotification+BNRAddditions.h"; path = "Category/NSNotification+BNRAddditions.h"; sourceTree = "<group>"; };
 		1B3F72491D587DF400A0FF31 /* NSNotification+BNRAddditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotification+BNRAddditions.m"; path = "Category/NSNotification+BNRAddditions.m"; sourceTree = "<group>"; };
 		1B3F72551D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+SSToolkitAdditions.h"; path = "Category/NSDate+SSToolkitAdditions.h"; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				1B945D981D5D62AB00CE22A2 /* BNRLeftSideController.h */,
-				1B1CEFCB1D6717E900E00F3A /* BNRLeftSideController.m */,
+				1B1CEFCE1D698DCB00E00F3A /* BNRLeftSideController.m */,
 				1B7BC6471D55E61F005E84FE /* AirPlayDeviceAutoSelect.h */,
 				1B7BC6481D55E61F005E84FE /* AirPlayDeviceAutoSelect.m */,
 			);
@@ -442,10 +442,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B1CEFCC1D6717E900E00F3A /* BNRLeftSideController.m in Sources */,
 				1B1CEFBF1D61AF8100E00F3A /* BNRFlipNumber.m in Sources */,
 				1B945D8D1D5B485200CE22A2 /* MainVC.m in Sources */,
 				1B1CEFC91D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */,
+				1B1CEFCF1D698DCB00E00F3A /* BNRLeftSideController.m in Sources */,
 				1B3F72581D58A65000A0FF31 /* NSDate+SSToolkitAdditions.m in Sources */,
 				1B945D961D5D61BE00CE22A2 /* UIImage+BNRAdditions.m in Sources */,
 				1B1CEFC41D61EF4700E00F3A /* BNRCurBtn.m in Sources */,
@@ -461,10 +461,10 @@
 				1B05401B1D5E3B4600619F17 /* BNRCirleView.m in Sources */,
 				1B1CEFCA1D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */,
 				1B1CEFC51D61EF4700E00F3A /* BNRCurBtn.m in Sources */,
+				1B1CEFD01D698DCB00E00F3A /* BNRLeftSideController.m in Sources */,
 				1B945D7F1D5B470300CE22A2 /* SDKLibDemo.xcdatamodeld in Sources */,
 				1B945D971D5D61BE00CE22A2 /* UIImage+BNRAdditions.m in Sources */,
 				1B945D761D5B470300CE22A2 /* AppDelegate.m in Sources */,
-				1B1CEFCD1D6717E900E00F3A /* BNRLeftSideController.m in Sources */,
 				1B945D8E1D5B485200CE22A2 /* MainVC.m in Sources */,
 				1B1CEFC01D61AF8100E00F3A /* BNRFlipNumber.m in Sources */,
 				1B945D731D5B470300CE22A2 /* main.m in Sources */,

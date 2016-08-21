@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const kNotifcationShowLeft;
 
 @class BNRLeftSideController;
 
@@ -21,6 +22,11 @@
  *  显示左视图时，主页视图下移的位置
  */
 @property (nonatomic, assign) CGFloat   yShift;
+
+/**
+ *  左边滑手势热区设置，默认100
+ */
+@property (nonatomic) int hitWidth;
 
 //初始化
 -(instancetype)initWithLeftView:(UIViewController *)LeftView

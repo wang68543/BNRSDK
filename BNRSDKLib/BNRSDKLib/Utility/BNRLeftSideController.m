@@ -16,7 +16,7 @@
 #define InitAlpha 1
 
 const char *kLeftSideControllerKey = "BNRLeftSideController";
-
+NSString *const kNotifcationShowLeft = @"notiShowLeftView";
 @interface BNRLeftSideController (){
     UIViewController * leftControl;
     UIViewController * mainControl;
@@ -27,7 +27,6 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
 
 @property(nonatomic,strong)UIView *maskView;
 @property(nonatomic) BOOL isShowLeftView;
-@property (nonatomic) int hitWidth;
 
 @property (nonatomic,strong) UITapGestureRecognizer *tap;
 @end
@@ -48,6 +47,7 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     [mainControl viewWillAppear:animated];
+    [self showMainView];
 
 }
 -(void)viewDidAppear:(BOOL)animated{
@@ -120,7 +120,7 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
         
         leftControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,-kScreenWidth/2.,0);
         
-        self.hitWidth = 50;
+        self.hitWidth = 100;
         self.xShift = kDutyOfWidth;
         self.yShift = 40;
         self.maskView.alpha = InitAlpha;
@@ -198,6 +198,7 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
     self.isShowLeftView = NO;
     [UIView commitAnimations];
     self.tap.enabled = NO;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotifcationShowLeft object:@(NO)];
 }
 
 //显示左视图
@@ -211,6 +212,7 @@ const char *kLeftSideControllerKey = "BNRLeftSideController";
     
     [leftControl viewWillAppear:YES];
     self.tap.enabled = YES;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotifcationShowLeft object:@(YES)];
 }
 
 
