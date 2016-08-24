@@ -20,6 +20,9 @@
 		1B1CEFCA1D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */; };
 		1B1CEFCF1D698DCB00E00F3A /* BNRLeftSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFCE1D698DCB00E00F3A /* BNRLeftSideController.m */; };
 		1B1CEFD01D698DCB00E00F3A /* BNRLeftSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFCE1D698DCB00E00F3A /* BNRLeftSideController.m */; };
+		1B1CEFD31D6D461700E00F3A /* UIColor+BNRAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CEFD11D6D461700E00F3A /* UIColor+BNRAdditions.h */; };
+		1B1CEFD41D6D461700E00F3A /* UIColor+BNRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFD21D6D461700E00F3A /* UIColor+BNRAdditions.m */; };
+		1B1CEFD51D6D461700E00F3A /* UIColor+BNRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CEFD21D6D461700E00F3A /* UIColor+BNRAdditions.m */; };
 		1B3F724A1D587DF400A0FF31 /* NSNotification+BNRAddditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3F72481D587DF400A0FF31 /* NSNotification+BNRAddditions.h */; };
 		1B3F724B1D587DF400A0FF31 /* NSNotification+BNRAddditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F72491D587DF400A0FF31 /* NSNotification+BNRAddditions.m */; };
 		1B3F72571D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3F72551D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h */; };
@@ -53,6 +56,8 @@
 		1B1CEFC61D62E85B00E00F3A /* UIViewController+HETAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+HETAdditions.h"; path = "Category/UIViewController+HETAdditions.h"; sourceTree = "<group>"; };
 		1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+HETAdditions.m"; path = "Category/UIViewController+HETAdditions.m"; sourceTree = "<group>"; };
 		1B1CEFCE1D698DCB00E00F3A /* BNRLeftSideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRLeftSideController.m; path = Utility/BNRLeftSideController.m; sourceTree = "<group>"; };
+		1B1CEFD11D6D461700E00F3A /* UIColor+BNRAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+BNRAdditions.h"; path = "Category/UIColor+BNRAdditions.h"; sourceTree = "<group>"; };
+		1B1CEFD21D6D461700E00F3A /* UIColor+BNRAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BNRAdditions.m"; path = "Category/UIColor+BNRAdditions.m"; sourceTree = "<group>"; };
 		1B3F72481D587DF400A0FF31 /* NSNotification+BNRAddditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotification+BNRAddditions.h"; path = "Category/NSNotification+BNRAddditions.h"; sourceTree = "<group>"; };
 		1B3F72491D587DF400A0FF31 /* NSNotification+BNRAddditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotification+BNRAddditions.m"; path = "Category/NSNotification+BNRAddditions.m"; sourceTree = "<group>"; };
 		1B3F72551D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+SSToolkitAdditions.h"; path = "Category/NSDate+SSToolkitAdditions.h"; sourceTree = "<group>"; };
@@ -130,6 +135,8 @@
 				1B945D941D5D61BE00CE22A2 /* UIImage+BNRAdditions.m */,
 				1B1CEFC61D62E85B00E00F3A /* UIViewController+HETAdditions.h */,
 				1B1CEFC71D62E85B00E00F3A /* UIViewController+HETAdditions.m */,
+				1B1CEFD11D6D461700E00F3A /* UIColor+BNRAdditions.h */,
+				1B1CEFD21D6D461700E00F3A /* UIColor+BNRAdditions.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -253,6 +260,7 @@
 				1B1CEFC81D62E85B00E00F3A /* UIViewController+HETAdditions.h in Headers */,
 				1B1CEFC31D61EF4700E00F3A /* BNRCurBtn.h in Headers */,
 				1B945DA51D5E1E0000CE22A2 /* BNRCirleView.h in Headers */,
+				1B1CEFD31D6D461700E00F3A /* UIColor+BNRAdditions.h in Headers */,
 				1B3F72571D58A65000A0FF31 /* NSDate+SSToolkitAdditions.h in Headers */,
 				1B945D6A1D5B01B800CE22A2 /* BNRMacro.h in Headers */,
 				1B945D8C1D5B485200CE22A2 /* MainVC.h in Headers */,
@@ -446,6 +454,7 @@
 				1B945D8D1D5B485200CE22A2 /* MainVC.m in Sources */,
 				1B1CEFC91D62E85B00E00F3A /* UIViewController+HETAdditions.m in Sources */,
 				1B1CEFCF1D698DCB00E00F3A /* BNRLeftSideController.m in Sources */,
+				1B1CEFD41D6D461700E00F3A /* UIColor+BNRAdditions.m in Sources */,
 				1B3F72581D58A65000A0FF31 /* NSDate+SSToolkitAdditions.m in Sources */,
 				1B945D961D5D61BE00CE22A2 /* UIImage+BNRAdditions.m in Sources */,
 				1B1CEFC41D61EF4700E00F3A /* BNRCurBtn.m in Sources */,
@@ -467,6 +476,7 @@
 				1B945D761D5B470300CE22A2 /* AppDelegate.m in Sources */,
 				1B945D8E1D5B485200CE22A2 /* MainVC.m in Sources */,
 				1B1CEFC01D61AF8100E00F3A /* BNRFlipNumber.m in Sources */,
+				1B1CEFD51D6D461700E00F3A /* UIColor+BNRAdditions.m in Sources */,
 				1B945D731D5B470300CE22A2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,4 +17,13 @@
  *  @return
  */
 + (UIImage *)imageWithColor:(UIColor *)color;
+
+/**
+ *  得到该点在图片中的颜色值
+ *
+ *  @param point <#point description#>
+ *
+ *  @return <#return value description#>
+ */
+-(UIColor *)colorAtPixel:(CGPoint)point;
 @end
