@@ -113,7 +113,7 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
         _maskView = [[UIView alloc] initWithFrame:self.view.bounds];
         _maskView.backgroundColor = [UIColor grayColor];
         _maskView.alpha = InitAlpha;
-        [self.view addSubview:_maskView];
+//        [self.view addSubview:_maskView];
         
         [self.view addSubview:mainControl.view];
         
