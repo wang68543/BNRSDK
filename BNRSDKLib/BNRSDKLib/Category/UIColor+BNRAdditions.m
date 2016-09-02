@@ -42,7 +42,6 @@
     if (CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) != kCGColorSpaceModelRGB) {
         return [NSString stringWithFormat:@"FFFFFF"];
     }
-    
     const CGFloat *rgba = CGColorGetComponents(color.CGColor);
     NSLog(@"%f,%f,%f",rgba[0],rgba[1],rgba[2]);
     return [NSString stringWithFormat:@"%02X%02X%02X", (int)((CGColorGetComponents(color.CGColor))[0]*255.0),
