@@ -17,4 +17,6 @@
  *  @return <#return value description#>
  */
 +(NSUInteger)getRGBValueWithColor:(UIColor *)color;
+
++(NSString *)getHexStrFromUIColor: (UIColor*) color;
 @end
