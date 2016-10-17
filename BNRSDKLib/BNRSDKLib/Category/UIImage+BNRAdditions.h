@@ -26,4 +26,7 @@
  *  @return <#return value description#>
  */
 -(UIColor *)colorAtPixel:(CGPoint)point;
+
+//改变图片的颜色
+- (UIImage *)changeImageColor:(UIColor *)color;
 @end

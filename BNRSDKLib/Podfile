@@ -4,6 +4,7 @@ platform :ios, "7.0"
 target "SDKLibDemo" do
 pod "SAMCategories"
 pod 'JTNumberScrollAnimatedView', '1.0.0'
+pod 'Masonry'
 end
 
 
