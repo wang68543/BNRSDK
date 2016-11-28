@@ -22,5 +22,5 @@ FOUNDATION_EXPORT const unsigned char BNRSDKLibVersionString[];
 #import "NSNotification+BNRAddditions.h"
 #import "UIImage+BNRAdditions.h"
 #import "BNRLeftSideController.h"
-#import "UIViewController+HETAdditions.h"
+#import "UIViewController+BNRAdditions.h"
 #import "UIColor+BNRAdditions.h"

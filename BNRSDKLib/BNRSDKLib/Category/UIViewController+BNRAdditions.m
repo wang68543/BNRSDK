@@ -1,14 +1,14 @@
 //
-//  UIViewController+HETAdditions.m
+//  UIViewController+BNRAdditions.m
 //  CLife
 //
 //  Created by JiangJun on 15/6/6.
 //  Copyright (c) 2015年 HET. All rights reserved.
 //
 
-#import "UIViewController+HETAdditions.h"
+#import "UIViewController+BNRAdditions.h"
 
-@implementation UIViewController (HETAdditions)
+@implementation UIViewController (BNRAdditions)
 - (void)transparentNavigationBar {
     // 设置导航栏透明，但按钮正常可见。
     [self.navigationController.navigationBar setTranslucent: YES];

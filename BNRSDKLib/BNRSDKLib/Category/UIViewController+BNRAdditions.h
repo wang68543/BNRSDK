@@ -1,5 +1,5 @@
 //
-//  UIViewController+HETAdditions.h
+//  UIViewController+BNRAdditions.h
 //  CLife
 //
 //  Created by JiangJun on 15/6/6.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (HETAdditions)
+@interface UIViewController (BNRAdditions)
 
 - (void)transparentNavigationBar;
 - (void)opaqueNavigationBar;

@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 #import <AVFoundation/AVFoundation.h>
 #import "BNRMacro.h"
-#import "UIViewController+HETAdditions.h"
+#import "UIViewController+BNRAdditions.h"
 #define kDutyOfWidth  (6*kScreenWidth/8.)
 
 #define InitAlpha 1
