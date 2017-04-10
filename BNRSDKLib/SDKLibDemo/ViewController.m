@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Masonry/Masonry.h>
+#import "BNRLeftSideController.h"
 @interface ViewController ()
 
 @property (nonatomic,strong) UIView *contentView;
@@ -39,6 +40,18 @@
     [self.contentView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.trailing.equalTo(tmpLabel.mas_trailing);
     }];
+    
+    UIViewController *vc1=  [[UIViewController alloc] init];
+    UIViewController *vc2 = [[UIViewController alloc] init];
+    vc1.view.backgroundColor = [UIColor redColor];
+    vc2.view.backgroundColor = [UIColor blueColor];
+    BNRLeftSideController *container = [[BNRLeftSideController alloc] initWithLeftView:vc1 andMainView:vc2 andBackgroundImage:nil];
+    container.yShift = 0;
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self presentViewController:container animated:YES completion:nil];
+    });
+    
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

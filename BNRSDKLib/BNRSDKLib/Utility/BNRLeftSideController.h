@@ -15,6 +15,10 @@ extern NSString *const kNotifcationShowLeft;
 
 @interface BNRLeftSideController : UIViewController
 /**
+ * 左边视图是否显示
+*/
+@property(nonatomic) BOOL isShowLeftView;
+/**
  *  显示左视图时，主页视图右移的位置
  */
 @property (nonatomic, assign) CGFloat   xShift;
