@@ -19,4 +19,6 @@
 +(NSUInteger)getRGBValueWithColor:(UIColor *)color;
 
 +(NSString *)getHexStrFromUIColor: (UIColor*) color;
+
++(UIColor *) colorFromHexRGB:(NSString *) inColorString alpha:(CGFloat)colorAlpha ;
 @end
