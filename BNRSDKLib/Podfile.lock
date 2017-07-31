@@ -1,6 +1,6 @@
 PODS:
   - JTNumberScrollAnimatedView (1.0.0)
-  - Masonry (1.0.1)
+  - Masonry (1.0.2)
   - SAMCategories (0.5.2)
 
 DEPENDENCIES:
@@ -10,7 +10,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   JTNumberScrollAnimatedView: 2777d71cab7ca8126e9cfa99f9fdd22c37644d48
-  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SAMCategories: bf8287f7961a0b343168d1fee16338dc1626ea39
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 5c8dddcb42d0c1c4fa7520f384c974d72ce6ad91
+
+COCOAPODS: 1.2.0
