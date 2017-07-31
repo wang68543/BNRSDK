@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Utils : NSObject
+@interface BNRUtils : NSObject
 
 //将数字时间转换为 xx小时xx分钟，如果转换失败，则放回plcae字符
 +(NSString *)timeIntCovertToTimeStr:(id)time withPlaceString:(NSString *)place;

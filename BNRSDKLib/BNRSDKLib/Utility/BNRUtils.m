@@ -6,9 +6,9 @@
 //  Copyright © 2017年 JustinYang. All rights reserved.
 //
 
-#import "Utils.h"
+#import "BNRUtils.h"
 
-@implementation Utils
+@implementation BNRUtils
 +(NSString *)timeIntCovertToTimeStr:(id)time withPlaceString:(NSString *)place{
     NSInteger value = 0;
     if ([time isKindOfClass:[NSNumber class]]) {
