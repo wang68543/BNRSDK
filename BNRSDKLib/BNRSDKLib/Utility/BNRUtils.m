@@ -18,10 +18,10 @@
         NSInteger hour = value/60;
         if (hour>0) {
             return [NSString stringWithFormat:@"%ld小时%02ld分",hour,min];
-        }else if(min > 0){
+        }else if(min >= 0){
             return [NSString stringWithFormat:@"%ld分",min];
         }else{
-            return nil;
+            return place;
         }
     }
 }
@@ -34,10 +34,10 @@
         NSInteger min = second/60;
         if (min>0) {
             return [NSString stringWithFormat:@"%ld分%02ld秒",min,sec];
-        }else if(sec > 0){
+        }else if(sec >= 0){
             return [NSString stringWithFormat:@"%ld秒",sec];
         }else{
-            return nil;
+            return place;
         }
     }
 }
