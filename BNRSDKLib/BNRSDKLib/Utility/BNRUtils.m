@@ -9,7 +9,7 @@
 #import "BNRUtils.h"
 
 @implementation BNRUtils
-+(NSString *)timeIntCovertToTimeStr:(NSInteger)time withPlaceString:(NSString *)place{
++(NSString *)timeIntCovertToHourAndMin:(NSInteger)time withPlaceString:(NSString *)place{
     NSInteger value = time;
     if (value < 0) {
         return place;
@@ -33,6 +33,25 @@
         NSInteger sec = second%60;
         NSInteger min = second/60;
         if (min>0) {
+            return [NSString stringWithFormat:@"%ld分%02ld秒",min,sec];
+        }else if(sec >= 0){
+            return [NSString stringWithFormat:@"%ld秒",sec];
+        }else{
+            return place;
+        }
+    }
+}
+
++(NSString *)timeIntCovertToHourMinAndSec:(NSInteger)second withPlaceString:(NSString *)place{
+    if (second < 0) {
+        return place;
+    }else{
+        NSInteger sec = second%60;
+        NSInteger min = second/60%60;
+        NSInteger hour = second/3600;
+        if (hour > 0) {
+            return [NSString stringWithFormat:@"%2ld时%2ld分%02ld秒",hour,min,sec];
+        }else if (min>0) {
             return [NSString stringWithFormat:@"%ld分%02ld秒",min,sec];
         }else if(sec >= 0){
             return [NSString stringWithFormat:@"%ld秒",sec];
