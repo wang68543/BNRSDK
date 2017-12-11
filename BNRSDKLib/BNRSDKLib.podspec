@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BNRSDKLib"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "A short description of BNRSDKLib."
 
   # This description is used to generate tags and improve search results.
@@ -91,16 +91,16 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "BNRSDKLib/BNRSDKLib/*.{h,m}"
+  s.source_files  = "BNRSDKLib/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
     s.subspec 'Utility' do |s2|
-      s2.source_files = 'BNRSDKLib/BNRSDKLib/Utility/*.{m,h}'
+      s2.source_files = 'BNRSDKLib/Utility/*.{m,h}'
     end
 
     s.subspec 'Category' do |s2|
-        s2.source_files = 'BNRSDKLib/BNRSDKLib/Category/*.{m,h}'
+        s2.source_files = 'BNRSDKLib/Category/*.{m,h}'
     end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

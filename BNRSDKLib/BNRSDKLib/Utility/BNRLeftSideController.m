@@ -13,7 +13,7 @@
 #import "UIViewController+BNRAdditions.h"
 #define kDutyOfWidth  (6*kScreenWidth/8.)
 
-#define InitAlpha 1
+#define kMaskViewAlpha 0.5
 
 const char *kLeftSideControllerKey = "BNRLeftSideController";
 NSString *const kNotifcationShowLeft = @"notiShowLeftView";
@@ -24,10 +24,8 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
     UIImageView * imgBackground;
     
 }
-
+//像右边滑动时加主页视图的mask
 @property(nonatomic,strong)UIView *maskView;
-//透明度为0，当显示左边视图时，加在主视图上， 点击手势加载他上面
-@property(nonatomic,strong)UIView *maskMainView;
 
 
 @property (nonatomic,strong) UITapGestureRecognizer *tap;
@@ -91,9 +89,6 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
         [imgview setImage:image];
         [self.view addSubview:imgview];
         
-        _maskMainView = [[UIView alloc] initWithFrame:self.view.bounds];
-        _maskMainView.backgroundColor = [UIColor whiteColor];
-        _maskMainView.alpha = 0.1;
         //滑动手势
         UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePan:)];
         [mainControl.view addGestureRecognizer:pan];
@@ -102,8 +97,6 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
         //单击手势
         self.tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handeTap:)];
         [self.tap setNumberOfTapsRequired:1];
-//        [mainControl.view addGestureRecognizer:self.tap];
-        [_maskMainView addGestureRecognizer:self.tap];
         self.tap.enabled = NO;
 
         UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipLeftHandle:)];
@@ -117,9 +110,10 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
         [self.view addSubview:leftControl.view];
         
         _maskView = [[UIView alloc] initWithFrame:self.view.bounds];
-        _maskView.backgroundColor = [UIColor whiteColor];
-        _maskView.alpha = InitAlpha;
-//        [self.view addSubview:_maskView];
+        _maskView.backgroundColor = [UIColor blackColor];
+        [_maskView addGestureRecognizer:self.tap];
+        [mainControl.view addSubview:_maskView];
+
         
         [self.view addSubview:mainControl.view];
         
@@ -128,7 +122,7 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
         self.hitWidth = 100;
         self.xShift = kDutyOfWidth;
         self.yShift = 40;
-        self.maskView.alpha = InitAlpha;
+        self.maskView.alpha = 0;
     }
     return self;
 }
@@ -159,7 +153,7 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
     if (point.x < self.xShift) {
         mainControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, point.x, yShiftFac);
         leftControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,-kScreenWidth/2.+leftShiftfac,0);
-        self.maskView.alpha = InitAlpha*(1 - point.x/self.xShift);
+        self.maskView.alpha = kMaskViewAlpha * point.x/self.xShift;
     }
     if (pan.state == UIGestureRecognizerStateEnded) {
         if (point.x < self.xShift/2.) {
@@ -201,15 +195,12 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
     }
     mainControl.view.transform = CGAffineTransformIdentity;
     leftControl.view.transform =  CGAffineTransformTranslate(CGAffineTransformIdentity,-kScreenWidth/2.,0);;
-    self.maskView.alpha = InitAlpha;
+    self.maskView.alpha = 0;
     self.isShowLeftView = NO;
     if (animation) {
         [UIView commitAnimations];
     }
     self.tap.enabled = NO;
-    if (self.maskMainView.superview) {
-        [self.maskMainView removeFromSuperview];
-    }
     [[NSNotificationCenter defaultCenter] postNotificationName:kNotifcationShowLeft object:@(NO)];
 }
 
@@ -221,14 +212,14 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
     mainControl.view.transform = CGAffineTransformTranslate(CGAffineTransformIdentity,self.xShift,self.yShift);
     leftControl.view.transform = CGAffineTransformIdentity;
     self.isShowLeftView = YES;
-    self.maskView.alpha = 0;
+    self.maskView.alpha = kMaskViewAlpha;
     if (animation) {
         [UIView commitAnimations];
     }
     
     [leftControl viewWillAppear:YES];
     self.tap.enabled = YES;
-    [mainControl.view addSubview:self.maskMainView];
+    
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kNotifcationShowLeft object:@(YES)];
 }
