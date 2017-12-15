@@ -75,6 +75,7 @@ NSString *const kNotifcationShowLeft = @"notiShowLeftView";
                     andMainView:(UIViewController *)MainView
                         andBackgroundImage:(UIImage *)image;
 {
+    self = [super init];
     if(self){
         
         leftControl = LeftView;
