@@ -66,7 +66,6 @@
 		1B7BC6401D55E47C005E84FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7BC6471D55E61F005E84FE /* AirPlayDeviceAutoSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirPlayDeviceAutoSelect.h; path = Utility/AirPlayDeviceAutoSelect.h; sourceTree = "<group>"; };
 		1B7BC6481D55E61F005E84FE /* AirPlayDeviceAutoSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirPlayDeviceAutoSelect.m; path = Utility/AirPlayDeviceAutoSelect.m; sourceTree = "<group>"; };
-		1B7BC64B1D55F257005E84FE /* BNRSDKLib.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = BNRSDKLib.podspec; sourceTree = "<group>"; };
 		1B945D691D5B01B800CE22A2 /* BNRMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRMacro.h; sourceTree = "<group>"; };
 		1B945D6F1D5B470300CE22A2 /* SDKLibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKLibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B945D721D5B470300CE22A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,7 +140,6 @@
 		1B7BC6311D55E47C005E84FE = {
 			isa = PBXGroup;
 			children = (
-				1B7BC64B1D55F257005E84FE /* BNRSDKLib.podspec */,
 				1B7BC63D1D55E47C005E84FE /* BNRSDKLib */,
 				1B7BC63C1D55E47C005E84FE /* Products */,
 				1B945D701D5B470300CE22A2 /* SDKLibDemo */,
@@ -330,6 +328,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
